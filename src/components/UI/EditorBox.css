@@ -5,7 +5,7 @@
   min-height: 55vh;
 }
 .toolbar {
-  background-color: lightcyan;
+  background-color: rgb(84, 138, 138);
   width: 100%;
   position: absolute;
   bottom: -3rem;

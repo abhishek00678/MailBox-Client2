@@ -16,8 +16,6 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import authenticateUser from "../store/auth-thunks";
 
-
-
 const theme = createTheme();
 
 export default function SignUp() {
@@ -36,7 +34,8 @@ export default function SignUp() {
     event.preventDefault();
 
     if (
-      formData.password.toLowerCase() === formData["confirm-password"].toLowerCase() &&
+      formData.password.toLowerCase() ===
+        formData["confirm-password"].toLowerCase() &&
       formData.email &&
       formData.password
     ) {
@@ -73,9 +72,7 @@ export default function SignUp() {
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign up
-          </Typography>
+          <Typography component="h1" variant="h5"></Typography>
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
@@ -117,17 +114,23 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
               Sign Up
             </Button>
             <Grid container display="flex" justifyContent="center">
               <Grid item>
-                <Button onClick={changeToSignIn}>Already have an account? Sign in</Button>
+                <Button onClick={changeToSignIn}>
+                  Already have an account? Sign in
+                </Button>
               </Grid>
             </Grid>
           </Box>
         </Box>
-       
       </Container>
     </ThemeProvider>
   );

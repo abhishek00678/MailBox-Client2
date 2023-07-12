@@ -9,10 +9,10 @@ const authenticateUser = (user) => {
 
     if (user.isSignUp) {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDg3fJgK9RIb10Lx78wGKxq9AvsmkA_ys8";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA8WkFrhMp9L8zv4K1ZnRcAGPjD3ubejB0";
     } else {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDg3fJgK9RIb10Lx78wGKxq9AvsmkA_ys8";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA8WkFrhMp9L8zv4K1ZnRcAGPjD3ubejB0";
     }
     requestBody = {
       email: user.email,

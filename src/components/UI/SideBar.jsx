@@ -55,7 +55,7 @@ const SideBar = () => {
       sx={{
         width: "15rem",
         height: "100vh",
-        bgcolor: "rgb(0,0,0, 0.8)",
+        bgcolor: "#c44569",
         position: "fixed",
         top: 0,
         left: 0,
@@ -64,9 +64,7 @@ const SideBar = () => {
     >
       <nav aria-label="main mailbox folders">
         <List sx={{ color: "white" }}>
-          <ListItem>
-           
-          </ListItem>
+          <ListItem></ListItem>
 
           <ListItem>
             <ListItemText primary="" />
@@ -100,9 +98,7 @@ const SideBar = () => {
           bottom: 0,
           p: "1rem 2rem",
         }}
-      >
-       
-      </Box>
+      ></Box>
     </Box>
   );
 };

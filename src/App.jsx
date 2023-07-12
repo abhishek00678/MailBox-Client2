@@ -56,12 +56,14 @@ function App() {
   return (
     <>
       <PopUpAlert />
-    
+
       {isAuthenticated && <Navbar />}
       {isAuthenticated && <SideBar />}
       <MailBoxModal />
       <Routes>
-        {!isAuthenticated && <Route path="*" element={<Navigate replace to="/signup" />} />}
+        {!isAuthenticated && (
+          <Route path="*" element={<Navigate replace to="/signup" />} />
+        )}
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         {isAuthenticated && (

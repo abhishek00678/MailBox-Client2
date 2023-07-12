@@ -7,7 +7,7 @@ export const getData = () => {
     let email = localStorage.getItem("email");
     if (email) {
       email = email.replace("@", "").replace(".", "");
-      let url = `https://mail-box-client-46467-default-rtdb.firebaseio.com/mails.json`;
+      let url = `https://mail-box-client-react-default-rtdb.firebaseio.com/mails.json`;
 
       try {
         const res = await axios(url);
@@ -44,7 +44,7 @@ export const putData = (mailBox) => {
         totalUnread: mailBox.totalUnread,
       };
 
-      let url = `https://mail-box-client-46467-default-rtdb.firebaseio.com/mails.json`;
+      let url = `https://mail-box-client-react-default-rtdb.firebaseio.com/mails.json`;
 
       try {
         await axios.put(url, requestBody);
